@@ -1,3 +1,4 @@
+import Card from "../ui/Card/Card";
 import classes from "./AvailableMeals.module.css";
 import MealItem from "./MealItem";
 const DUMMY_MEALS = [
@@ -32,9 +33,9 @@ const AvailableMeals = () => {
     <MealItem key={meal.id} meal={meal} />
   ));
   return (
-    <div className={classes["available-meals"]}>
+    <Card className={classes["available-meals"]}>
       <div>{meals}</div>
-    </div>
+    </Card>
   );
 };
 

@@ -1,5 +1,6 @@
 import { Add } from "@mui/icons-material";
 import { Button, Typography } from "@mui/material";
+import Input from "../ui/Input/Input";
 import classes from "./MealItemForm.module.css";
 
 const MealItemForm = () => {
@@ -9,7 +10,7 @@ const MealItemForm = () => {
         <Typography variant="body2" sx={{ fontWeight: "bold" }}>
           Amount
         </Typography>
-        <input type="number" defaultValue={1} />
+        <Input input={{ type: "number", defaultValue: 1 }} />
       </div>
       <div className={classes["action-row"]}>
         <Button

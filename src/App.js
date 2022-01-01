@@ -6,6 +6,7 @@ import cyan from "@mui/material/colors/cyan";
 import "./App.css";
 import Header from "./components/layouts/Header";
 import Meals from "./components/meals/Meals";
+import { DialogProvider } from "./components/ui/Dialog/Dialog";
 
 function App() {
   const theme = createTheme({
@@ -20,8 +21,10 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline enableColorScheme>
           <div className="App">
-            <Header />
-            <Meals />
+            <DialogProvider>
+              <Header />
+              <Meals />
+            </DialogProvider>
           </div>
         </CssBaseline>
       </ThemeProvider>

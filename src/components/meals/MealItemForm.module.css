@@ -12,11 +12,6 @@
 
 .input-row input {
   width: 50px;
-  border: 1px solid #cccccc;
-  border-radius: 0.2rem;
-  padding: 2px 5px;
-  background-color: aliceblue;
-  color: black;
   margin-left: 10px;
 }
 
