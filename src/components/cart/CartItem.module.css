@@ -1,7 +1,7 @@
 .cart-item {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0.15rem solid #8b6056;
   padding: 10px;
 }
 
@@ -10,14 +10,19 @@
   flex-direction: column;
 }
 
+.name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 .quantity {
   display: flex;
-  align-content: center;
+  align-items: center;
   margin: 10px 0;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 .price {
-  color: brown;
+  color: #8b6056;
   font-weight: bold;
   width: 60px;
 }
@@ -26,4 +31,23 @@
   padding: 5px 10px;
   margin-left: 30px;
   font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions button {
+  margin-right: 10px;
+  padding: 3px;
+  min-width: 35px;
+  width: 35px;
+  border-color: #8b6056;
+  color: #8b6056;
+}
+
+.actions button:last-child {
+  margin-right: 0px;
 }

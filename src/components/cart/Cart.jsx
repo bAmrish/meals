@@ -27,7 +27,19 @@ const Cart = () => {
   ));
   return (
     <div className={classes.cart}>
-      <Card>{orders}</Card>
+      <Card>
+        <div>{orders}</div>
+        <div className={classes.total}>
+          <div className={classes["total-text"]}>Total Amount</div>
+          <div className={classes["total-amount"]}>$72.42</div>
+        </div>
+        <div className={classes.actions}>
+          <button className={classes.button}>Close</button>
+          <button className={`${classes.button} ${classes.filled}`}>
+            Order
+          </button>
+        </div>
+      </Card>
     </div>
   );
 };
