@@ -1,0 +1,26 @@
+.meal-item {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #aaa;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.meal-item .item-details .name {
+  font-weight: 600;
+}
+
+.meal-item .item-details .desc {
+  font-style: oblique;
+}
+
+.meal-item .item-details .price {
+  font-weight: bold;
+  color: brown;
+}

@@ -1,0 +1,9 @@
+.total-items {
+  display: flex;
+  margin-left: 10px;
+  background: rgb(41, 12, 12);
+  border-radius: 20px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+}

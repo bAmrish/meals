@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "@emotion/react";
+import { CssBaseline } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
+import orange from "@mui/material/colors/deepOrange";
+import cyan from "@mui/material/colors/cyan";
+import "./App.css";
+import Header from "./components/layouts/Header";
+import Meals from "./components/meals/Meals";
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      mode: "dark",
+      primary: orange,
+      secondary: cyan,
+    },
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <CssBaseline enableColorScheme>
+          <div className="App">
+            <Header />
+            <Meals />
+          </div>
+        </CssBaseline>
+      </ThemeProvider>
+    </>
   );
 }
 
