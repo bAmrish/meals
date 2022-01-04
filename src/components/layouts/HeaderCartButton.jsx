@@ -7,8 +7,11 @@ import Cart from "../cart/Cart";
 
 const HeaderCartButton = () => {
   const dialog = useContext(DialogContext);
+  const cartCloseHandler = () => {
+    dialog.close();
+  }
   const orderHandler = () => {
-    dialog.open(<Cart />);
+    dialog.open(<Cart onCartClose={cartCloseHandler} />);
   };
   return (
     <Button

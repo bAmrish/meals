@@ -21,7 +21,7 @@ const DUMMY_ORDER = [
     amount: 4,
   },
 ];
-const Cart = () => {
+const Cart = (props) => {
   const orders = DUMMY_ORDER.map((order) => (
     <CartItem key={order.meal.id} meal={order.meal} amount={order.amount} />
   ));
@@ -34,8 +34,8 @@ const Cart = () => {
           <div className={classes["total-amount"]}>$72.42</div>
         </div>
         <div className={classes.actions}>
-          <button className={classes.button}>Close</button>
-          <button className={`${classes.button} ${classes.filled}`}>
+          <button className={classes.button} onClick={props.onCartClose}>Close</button>
+          <button className={`${classes.button} ${classes.filled}`} >
             Order
           </button>
         </div>
