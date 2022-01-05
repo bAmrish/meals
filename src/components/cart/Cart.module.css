@@ -22,7 +22,7 @@
 }
 
 .button {
-  border: 1px solid #802915;
+  border: 1px solid #d0b0a9;
   padding: 5px 20px;
   background-color: transparent;
   color: #802915;
@@ -42,7 +42,10 @@
   background-color: #802915;
   color: white;
 }
-
+.button:disabled, .button:disabled:hover {
+  background-color: gray;
+  cursor: default;
+}
 .actions button {
   margin-right: 10px;
 }
