@@ -1,12 +1,13 @@
-import { ThemeProvider } from "@emotion/react";
-import { CssBaseline } from "@mui/material";
-import { createTheme } from "@mui/material/styles";
+import {ThemeProvider} from "@emotion/react";
+import {CssBaseline} from "@mui/material";
+import {createTheme} from "@mui/material/styles";
 import orange from "@mui/material/colors/deepOrange";
 import cyan from "@mui/material/colors/cyan";
 import "./App.css";
 import Header from "./components/layouts/Header";
 import Meals from "./components/meals/Meals";
-import { DialogProvider } from "./components/ui/Dialog/Dialog";
+import {DialogProvider} from "./components/ui/Dialog/Dialog";
+import {CartProvider} from "./components/store/cart-context";
 
 function App() {
   const theme = createTheme({
@@ -21,10 +22,12 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline enableColorScheme>
           <div className="App">
-            <DialogProvider>
-              <Header />
-              <Meals />
-            </DialogProvider>
+            <CartProvider>
+              <DialogProvider>
+                <Header/>
+                <Meals/>
+              </DialogProvider>
+            </CartProvider>
           </div>
         </CssBaseline>
       </ThemeProvider>
