@@ -8,7 +8,7 @@ import classes from "./Checkout.module.css";
 const isNotBlank = (value) => value.trim().length > 0;
 const postalValid = (value) => value.trim().length >= 5;
 
-const Checkout = () => {
+const Checkout = (props) => {
   const cart = useContext(cartContext);
   const totalItems = cart.items.reduce((total, item) => total + item.amount, 0);
 
@@ -42,7 +42,6 @@ const Checkout = () => {
     const formValid =
       nameValid && address1Valid && postalCodeValid && cityValid;
     const userData = { name, address1, address2, postalCode, city };
-    console.log(userData);
 
     setError({
       name: !nameValid,
@@ -54,6 +53,8 @@ const Checkout = () => {
     if (!formValid) {
       return;
     }
+
+    props.onCheckout(userData);
   };
 
   const nameControlClasses =
@@ -123,7 +124,9 @@ const Checkout = () => {
           <Button variant="contained" type="submit">
             Checkout!
           </Button>
-          <Button variant="text">Cancel</Button>
+          <Button variant="text" onClick={props.onClose}>
+            Cancel
+          </Button>
         </div>
       </form>
     </Card>

@@ -23,7 +23,7 @@ export const DialogProvider = (props) => {
   };
 
   const backgroundClickHandker = () => {
-    setDialogOpen(false);
+    // setDialogOpen(false);
   };
 
   const contentClickHandler = (event) => {
